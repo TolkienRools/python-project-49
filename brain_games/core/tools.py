@@ -35,3 +35,17 @@ def ask_about_calc():
     first_number, second_number = generate_number(), generate_number()
     return (f"{first_number} {sign} {second_number}",
             str(calc_result(first_number, second_number, sign)))
+
+
+def find_gcd(first_num, second_num):
+    if second_num == 0:
+        return first_num
+    else:
+        return find_gcd(second_num, first_num % second_num)
+
+
+def ask_about_gcd():
+
+    first_number, second_number = generate_number(), generate_number()
+    return (f"{first_number} {second_number}",
+            str(find_gcd(first_number, second_number)))
