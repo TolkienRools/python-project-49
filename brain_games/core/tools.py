@@ -49,3 +49,27 @@ def ask_about_gcd():
     first_number, second_number = generate_number(), generate_number()
     return (f"{first_number} {second_number}",
             str(find_gcd(first_number, second_number)))
+
+
+def generate_progression():
+    start = random.randint(0, 30)
+    step = random.randint(1, 10)
+    terms = random.randint(5, 10)
+    progression = []
+    for i in range(1, terms + 1):
+        term_n = start + (i - 1) * step
+        progression.append(term_n)
+
+    return progression, terms
+
+
+def ask_about_progression():
+    progression, terms = generate_progression()
+    stringified_progression = list(map(str, progression))
+    index_pass_term = random.randint(0, terms-1)
+    pass_term = stringified_progression[index_pass_term]
+    stringified_progression[index_pass_term] = '..'
+
+    return " ".join(stringified_progression), pass_term
+
+
