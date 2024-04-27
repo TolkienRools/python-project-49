@@ -66,10 +66,21 @@ def generate_progression():
 def ask_about_progression():
     progression, terms = generate_progression()
     stringified_progression = list(map(str, progression))
-    index_pass_term = random.randint(0, terms-1)
+    index_pass_term = random.randint(0, terms - 1)
     pass_term = stringified_progression[index_pass_term]
     stringified_progression[index_pass_term] = '..'
 
     return " ".join(stringified_progression), pass_term
 
 
+def is_prime(number):
+    for i in range(2, number):
+        if number % i == 0:
+            return 'no'
+
+    return 'yes'
+
+
+def ask_about_prime():
+    number_to_check = random.randint(1, 100)
+    return str(number_to_check), is_prime(number_to_check)
