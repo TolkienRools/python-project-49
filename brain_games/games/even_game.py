@@ -4,5 +4,5 @@ from brain_games.core.tools import ask_about_even, validate_input
 
 def even_quiz():
     base_game("Answer \"yes\" if the number is even, "
-              "otherwise answer \"no\"", ask_about_even,
+              "otherwise answer \"no\".", ask_about_even,
               validate_input)
