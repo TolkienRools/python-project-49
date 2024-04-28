@@ -1,11 +1,16 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+repository = "https://github.com/TolkienRools/python-project-49"
+description = "hexlet-code is package with basic math console games"
 authors = ["Vladislav <balenkov53@gmail.com>"]
 readme = "README.md"
 packages = [
    { include = "brain_games" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Games/Entertainment"
 ]
 
 [tool.poetry.dependencies]
