@@ -74,4 +74,4 @@ brain-progression
 
 ## Example of installation and running
 
-![](https://github.com/TolkienRools/python-project-49/demo.gif)
+![](https://github.com/TolkienRools/python-project-49/blob/main/demo.gif)
