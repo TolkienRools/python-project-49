@@ -33,7 +33,7 @@ def ask_about_progression():
     pass_term = stringified_progression[index_pass_term]
     stringified_progression[index_pass_term] = '..'
 
-    return " ".join(stringified_progression), pass_term
+    return ' '.join(stringified_progression), pass_term
 
 
 def progression_quiz():
