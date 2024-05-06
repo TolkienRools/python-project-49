@@ -1,6 +1,6 @@
 import prompt
 
-NUMBER_OF_QUESTION = 3
+NUMBER_OF_QUESTIONS = 3
 
 
 def greeting():
@@ -10,17 +10,16 @@ def greeting():
     return name
 
 
-def base_game(main_question,
-              question_func,
-              validate_user_answer):
+def play_base_game(main_question,
+                   question_func):
 
     user_name = greeting()
     print(main_question)
 
-    for _ in range(NUMBER_OF_QUESTION):
+    for _ in range(NUMBER_OF_QUESTIONS):
         question, true_answer = question_func()
         print(f'Question: {question}')
-        user_answer = validate_user_answer('Your answer: ')
+        user_answer = prompt.string('Your answer: ')
         if user_answer != true_answer:
             print(f'\'{user_answer}\' is wrong answer'
                   f' ;(. Correct answer was \'{true_answer}\'.')

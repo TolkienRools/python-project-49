@@ -1,8 +1,7 @@
-from brain_games.core.base_game import base_game
-from brain_games.core.tools import validate_input, generate_number
 import random
 
-CALC_QUESTION = 'What is the result of the expression?'
+MIN_OPERAND_VALUE = 0
+MAX_OPERAND_VALUE = 100
 
 
 def calc_result(first_num, second_num, sign):
@@ -18,10 +17,7 @@ def calc_result(first_num, second_num, sign):
 def ask_about_calc():
     sign = random.choice(['+', '-', '*'])
 
-    first_number, second_number = generate_number(), generate_number()
+    first_number = random.randint(MIN_OPERAND_VALUE, MAX_OPERAND_VALUE)
+    second_number = random.randint(MIN_OPERAND_VALUE, MAX_OPERAND_VALUE)
     return (f'{first_number} {sign} {second_number}',
             str(calc_result(first_number, second_number, sign)))
-
-
-def calc_quiz():
-    base_game(CALC_QUESTION, ask_about_calc, validate_input)

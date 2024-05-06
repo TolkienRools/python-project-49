@@ -1,8 +1,5 @@
-from brain_games.core.base_game import base_game
-from brain_games.core.tools import validate_input
 import random
 
-PROGRESSION_QUESTION = 'What number is missing in the progression?'
 MIN_FIRST_PROGRESSION_TERM = 0
 MAX_FIRST_PROGRESSION_TERM = 30
 MIN_PROGRESSION_STEP = 1
@@ -34,7 +31,3 @@ def ask_about_progression():
     stringified_progression[index_pass_term] = '..'
 
     return ' '.join(stringified_progression), pass_term
-
-
-def progression_quiz():
-    base_game(PROGRESSION_QUESTION, ask_about_progression, validate_input)
