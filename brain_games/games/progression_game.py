@@ -1,5 +1,6 @@
 import random
 
+GAME_QUESTION = 'What number is missing in the progression?'
 MIN_FIRST_PROGRESSION_TERM = 0
 MAX_FIRST_PROGRESSION_TERM = 30
 MIN_PROGRESSION_STEP = 1
@@ -23,7 +24,7 @@ def generate_progression():
     return progression, terms
 
 
-def ask_about_progression():
+def question_func():
     progression, terms = generate_progression()
     stringified_progression = list(map(str, progression))
     index_pass_term = random.randint(MIN_PASS_TERM_INDEX, terms - 1)

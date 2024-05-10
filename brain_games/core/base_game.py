@@ -1,6 +1,6 @@
 import prompt
 
-NUMBER_OF_QUESTIONS = 3
+QUESTIONS_COUNT = 3
 
 
 def greeting():
@@ -10,14 +10,13 @@ def greeting():
     return name
 
 
-def play_base_game(main_question,
-                   question_func):
+def play_base_game(game_module):
 
     user_name = greeting()
-    print(main_question)
+    print(game_module.GAME_QUESTION)
 
-    for _ in range(NUMBER_OF_QUESTIONS):
-        question, true_answer = question_func()
+    for _ in range(QUESTIONS_COUNT):
+        question, true_answer = game_module.question_func()
         print(f'Question: {question}')
         user_answer = prompt.string('Your answer: ')
         if user_answer != true_answer:

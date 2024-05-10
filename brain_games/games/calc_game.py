@@ -1,5 +1,6 @@
 import random
 
+GAME_QUESTION = 'What is the result of the expression?'
 MIN_OPERAND_VALUE = 0
 MAX_OPERAND_VALUE = 100
 
@@ -14,7 +15,7 @@ def calc_result(first_num, second_num, sign):
             return first_num * second_num
 
 
-def ask_about_calc():
+def question_func():
     sign = random.choice(['+', '-', '*'])
 
     first_number = random.randint(MIN_OPERAND_VALUE, MAX_OPERAND_VALUE)
